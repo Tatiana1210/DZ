@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var i=0;
+   var rows=4;
+   var str="<table><tbody>"+
+   "<tr><th>№</th><th>№*2</th></tr>";
+   while (i<rows) {
+      if (1%2) {
+        str = str + "<tr style="backgroung-color:blue">"+
+                      "<td>"+(i+1)"*2+ "</td>"+
+                      </tr>";
+      } else {
+        str = str + "<tr style="backgroung-color:blue">"+
+                      "<td>"+(i+1)"+ "</td>"+
+                      </tr>";
+   }
+  </script>
+</body>
+</html>

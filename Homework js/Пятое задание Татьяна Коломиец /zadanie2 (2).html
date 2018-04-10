@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// Заданы два массива A и B необходимо их объединить
+// в один массив C так, чтобы в массиве остались уникальные
+// (неповторяющиеся) элементы.
+// Например: A = [1,2], B = [2,3] получим С = [1, 2, 3].
+var A = [1,2];
+var B = [2,3];
+var C;
+C = A.concat(B);
+console.log(A,B);
+  for (let i=0; i<C.length;i++) {
+    for(let j=i+1; j<C.length; j++) {
+      if(C[i]===C[j]) {
+      C.splice(j-1,1);
+      break;
+    }
+    }
+}
+console.log (C);
+</script>
+</body>
+</html>

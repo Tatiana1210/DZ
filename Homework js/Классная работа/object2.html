@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+   let vowels=['а','е','ё','и','о','у','ы','э','ю','я'];
+   let consonant=['б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л',' м',' н', 'п', 'р',' с',' т',' ф', 'х', 'ц', 'ч', 'ш', 'щ'];
+   let wordLength=Math.floor(Math.random()*(5-3+1))+3;
+   //firstLetter: 0-гласные, 1-согласные;
+   let firstLetter=Math.floor(Math.random()*(1-0+1))+0;
+   let word='';
+   let currLetter=firstLetter;
+   for(let i=0; i<wordLength; i++) {
+     if (currLetter) {
+       //согласные
+       word+=consonant [Math.floor(Math.random()*(consonant.length))];//индекс в массиве consonant
+      currLetter=0;
+     } else {
+       //гласные
+       word+=vowels[Math.floor(Math.random()*(vowels.length))]//индекс в массиве consonant
+      currLetter=1;
+     }
+   }
+   console.log(word);
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+      let arr=[1,-3,3,3,-2,-1];  //predicat vozvrachae da ili net вывели из массива положительные числа
+      function filter(a,pred) {   //изменяя pred (num) меняется поведение верхней функции
+        let result=[];
+        for (let i=0;i<a.length;i++)
+          if (pred (a[i]))
+             result.push(a[i]);
+
+             return result;
+        }
+       function isNegative(num) {
+         return num<0;       }
+         console.log(filter(arr,isNegative));
+  </script>
+</body>
+</html>

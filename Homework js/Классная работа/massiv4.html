@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  let arr=[7,9,4,3,8,2,1];
+  for (let i=0; i<arr.length; i++) {
+    let min=arr[i];
+    for (let j=i+1; j<arr.length-1-i; j++) {
+      if (min>arr[j]) {
+        var temp=arr[i]
+        man=arr[j+1];
+        min=temp;
+      }
+    }
+    arr[i]=min;
+  }
+  console.log(arr);
+  </script>
+</body>
+</html>

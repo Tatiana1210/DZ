@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  function mat_model (c1,c2,c3,c4) {
+        return function (x) {
+             return c1+c2*x+c3*x*x+c4*x*x*x;
+        }
+        }
+      var model=mat_model (1,2,3,4);
+      concole.log(model(10));
+
+      function mat_model (obj) {
+            return function (x) {
+                 return obj.c1+obj.c2*x+obj.c3*x*x+obj.c4*x*x*x;
+            }
+            }
+          var model=mat_model ({c1:1,c2:3,c3:4,c4:4});
+          concole.log(model(10));
+  </script>
+</body>
+</html>

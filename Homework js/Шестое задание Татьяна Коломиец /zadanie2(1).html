@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  let student = {
+    Name: 'Иван',
+    Surname: 'Петров',
+    Age:22,
+    Interests:["Программирование", "Музыка", "Аниме"],
+    University: "ITMO",
+    fullInform: function () {
+      return this.Name+'&nbsp;&nbsp'+ this.Surname+'</br> '+'Возраст:'+this.Age+'</br>'+'Интересы:'+this.Interests+'</br>'+'Университет:'+ this.University;
+  },
+  }
+document.write (student.fullInform());
+  </script>
+</body>
+</html>

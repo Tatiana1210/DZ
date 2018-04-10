@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var Multiplytable = ('<h1 style="font-weight:bold; color:red; text-align: center;">Таблица умножения</h1>');
+  document.write(Multiplytable);
+  for (var j = 1; j <= 10; j++)
+  { document.write("<div style='float: left; width: 66px; border: 1px solid; margin-left: 2%; border-radius:15px; padding-left:15px;'>");
+  for ( var i = 1; i <=9; i++)
+  { document.write(j + "*" + i + "=" +(i*j) + "<br>"); }
+  document.write ("</div>"); }
+  </script>
+</body>
+</html>

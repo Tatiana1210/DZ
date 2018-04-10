@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  // Написать отдельную функцию, которая выводит пользователю
+  // заданное число чисел Фибоначчи.
+  // (например, первых 8 чисел Фибоначчи:  1, 1, 2, 3, 5, 8, 13, 21).
+  // Заданное число передается функции в качестве аргумента.
+  // Про числа Фибоначчи: https://ru.wikipedia.org/wiki/Числа_Фибоначчи
+var a=[0,1];
+  function fibonachy (amount) {
+    for (let i=0;i<=amount;i++) {
+     a.push(a[i]+a[i+1]);
+      }
+    return a
+  }
+  console.log (fibonachy(8));
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Первый опыт с бибилиотекой</title>
+</head>
+<body>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <div id="placeholder" style="width:480px; height:400px;"></div>
+  <script type="text/javascript">
+   function calc(x) {
+     if (x<0) {
+       return 2*x+1;
+     }
+     else if (x>=0 && x<2) {
+       return -1,5*x+1;
+     }
+     else {
+       return x-4;
+     }
+   }
+     var linel={
+       x:[],
+       y:[],
+       type: 'scatter'
+     };
+     for (var i=-500;i<=500;i++) {
+       var x=i/100;
+       linel.x.push(x);
+       linel.y.push(calc(x));
+     }
+     var data=[linel];
+     Plotly.newPlot('placeholder', data);
+  </script>
+</body>
+</html>

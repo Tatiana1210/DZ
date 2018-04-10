@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  // Напишите функцию (), которая в зависимости от переданных
+  // в нее целочисленных аргументов "количество дней", будет выводить
+  // слово "день" в нужно форме ("если передали - 1, то 1 день",
+  // "если передали - 3, то 3 дня" и т.д).
+  var x;
+  function day (numberOfDay)  {
+    if(numberOfDay===1||numberOfDay===21||numberOfDay===31||numberOfDay===41||numberOfDay===51) {
+       x="день";
+    }
+    if((numberOfDay>=2 && numberOfDay<=4)||(numberOfDay>=22 && numberOfDay<=24)||(numberOfDay>=32 && numberOfDay<=34)||(numberOfDay>=42 && numberOfDay<=44)) {
+      x="дня";
+    }
+    if((numberOfDay>=5 && numberOfDay<=20)||(numberOfDay>=25 && numberOfDay<=30)||(numberOfDay>=35 && numberOfDay<=40)||(numberOfDay>=45 && numberOfDay<=50)) {
+      x="дней";
+    }
+    return numberOfDay+'  '+x;
+    }
+    document.write(day(51));
+
+  </script>
+</body>
+</html>

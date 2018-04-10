@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Первый опыт с бибилиотекой</title>
+</head>
+<body>
+  <script src="myfirstLib.js"></script>
+  <script type="text/javascript">
+   var arr=[1,2,3,4,5];
+   arr= myfirstLib.remove(arr,2);
+   console.log(arr);
+   var str="Help!";
+   str=myfirstLib.repeat(str,5);
+   console.log(str);
+   var arrObj=[
+     {name:'Sasha', lastname:'Petrov'},
+     {name:'Vasy', lastname:'Ivanov'},
+      {name: 'Ivan', lastname:'Sidorov'},
+      1,
+      {lastname:'Sokolov'}
+   ];
+   var arrNames=myfistLib.pluck(arrObj,'name');
+   console.log(arrNames);
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var а = prompt ("Введите координаты вершины 1- значение (x)");
+  a=parseInt;
+  var b = prompt ("Введите координаты вершины 1 - значение (y)") ;
+  b=parseInt (b);
+  var c = prompt ("Введите координаты вершины 1 - значение (z)") ;
+  c=parseInt (c);
+  var d = prompt ("Введите координаты вершины 2- значение (x)");
+  d=parseInt (d);
+  var e = prompt ("Введите координаты вершины 2 - значение (y)") ;
+  e=parseInt (e);
+  var f = prompt ("Введите координаты вершины 2 - значение (z)") ;
+  f=parseInt (f);
+  var g = prompt ("Введите координаты вершины 3- значение (x)");
+  g=parseInt (g);
+  var h = prompt ("Введите координаты вершины 3 - значение (y)") ;
+  g=parseInt (g);
+  var i = prompt ("Введите координаты вершины 3 - значение (z)") ;
+  g=parseInt (g);
+   var sidefirst = Math.sqrt(Math.pow((a-d),2)+Math.pow((b-e),2)+Math.pow((c-f),2));
+   var sidesecond =Math.sqrt(Math.pow((a-g),2)+Math.pow((b-h),2)+Math.pow((c-i),2));
+   var sidethird= Math.sqrt(Math.pow((g-d),2)+Math.pow((h-e),2)+Math.pow((i-f),2));
+
+   if (Math.pow((sidefirst),2)===Math.pow((sidesecond),2)+(Math.pow((sidethird),2)))
+   {alert ("Треугольник прямоугольный!");}
+   else if (Math.pow((sidesecond),2)===Math.pow((sidefirst),2)+Math.pow((sidethird),2))
+   {alert ("Треугольник прямоугольный!");}
+   else if (Math.pow((sidethird),2)===Math.pow((sidefirst),2)+Math.pow((sidesecond),2))
+   {alert ("Треугольник прямоугольный!");}
+   else
+   {alert ("Не прямоуголный треугольник");}
+
+
+  </script>
+  </script>
+</body>
+</html>

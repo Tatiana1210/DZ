@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Создать объект «Товар» включающий:
+ - свойства, такие как фото, артикул,
+ описание и т.п.;
+ - метод, которому при вызове передается
+ id пустого div элемента и в этот html
+ элемент данный метод создаст и внесёт
+ все необходимые html элементы, стили,
+ и содержание для отображения
+ всей информации хранящихся в свойствах
+ объекта о данном товаре. Дизайн оформления
+ информации в html о товаре –
+ это ваше творчество. -->
+ <div id="merchandise"></div>
+ <script>
+ var merchandise = {
+   name: "Хрюха-мобиль",
+   photo:"dasauto.jpg",
+   vendor_code: "23239204903",
+   description: "Мощный, оригинальный, розовый. При нажатии на клаксон издает оригинальный звук:'Хрю-хрю'",
+   price: "3500$",
+   total: fullInform(),
+};
+
+function fullInform(merchandise) {
+        let auto= document.getElementById('merchandise');
+        let img = document.createElement('img');
+        photo.setAttribute("src", this.photo);
+        photo.style.height =  '40 rem';
+        photo.style.display='flex';
+
+        let name = document.createElement('h1');
+        name.innerHTML = this.name;
+        name.style.color = "#red";
+
+        let vendor_code = document.createElement('h3');
+        vendor_code.innerHTML = this.vendor_code;
+
+        let description = document.createElement('div');
+        divText.style.width = '30%';
+
+        let price = document.createElement('h2');
+        price.innerHTML = this.price + ' $';
+        price.style.fontWeight = 'bold';
+
+        let button = document.createElement('button');
+        button.innerHTML = 'Задать вопрос продавцу';
+        button.style.border = '1px solid';
+        button.style. color = '#red';
+        button.style.fontWeight = 'bold';
+        button.style.fontSize = '1,2rem';
+
+        // divInfo.appendChild(img);
+        // divText.appendChild(name);
+        // divText.appendChild(author);
+        // divText.appendChild(par);
+        // divText.appendChild(price);
+        // divText.appendChild(button);
+    };
+
+fullInform(merchandise);
+  </script>
+</body>
+</html>

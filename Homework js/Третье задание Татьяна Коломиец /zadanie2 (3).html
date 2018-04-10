@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  // Проверить что введенный пароль удовлетворяет следующим условиям сложности:
+	// - длинна от 9 символов;
+	// - содержит обязательно английские буквы верхнего и нижнего регистра;
+	// - содержит более двух цифр;
+	// - содержит обязательно один из неалфавитных символов (например, !, $, #, %).
+
+var pass=prompt ("Введите пароль от 9 символов");
+var reg1=/\d{1}/g;
+var numbertest=pass.match(reg1);
+var reg2=/[0-9]/ig;
+var reg3=/[!,$,#,%]+?/ig;
+var reg7=/[a-z]/g;
+var reg8=/[A-Z]/g;
+if (pass.length<9) {
+    alert ("Короткий пароль");
+}
+if (numbertest.length<2) {
+  alert("false");
+}
+else {
+  alert("true");
+}
+if (reg2) {
+  alert(reg2.test(pass));
+}
+if (reg3) {
+  alert(reg3.test(pass));
+}
+if (reg7) {
+  alert(reg7.test(pass));
+}
+if (reg8) {
+  alert(reg8.test(pass));
+}
+alert("Все true? Пароль отличный, не взломают никогда!")
+</script>
+</body>
+</html>

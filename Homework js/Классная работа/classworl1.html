@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var z = prompt ("Введите размер оклада");
+    z=parseFloat (z);
+    var t = prompt ("Введите кол-во дней в месяце");
+    t=parseInt(t);
+    var o = prompt ("Введите кол-во отработанных дней");
+    t=parseInt(t);
+     var g = (((z/t)*o)*0.87);
+    alert ("Твоя зарплата"+ g.toFixed(2));
+  </script>
+</body>
+</html>
