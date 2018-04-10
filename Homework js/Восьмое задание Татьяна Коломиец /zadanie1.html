@@ -23,19 +23,19 @@
  <script>
  var merchandise = {
    name: "Хрюха-мобиль",
-   photo:"dasauto.jpg",
+   img:"dasauto.jpg",
    vendor_code: "23239204903",
-   description: "Мощный, оригинальный, розовый. При нажатии на клаксон издает оригинальный звук:'Хрю-хрю'",
+   description: "Мощный, оригинальный, розовый.'",
    price: "3500$",
    total: fullInform(),
 };
 
-function fullInform(merchandise) {
+function fullInform() {
         let auto= document.getElementById('merchandise');
         let img = document.createElement('img');
-        photo.setAttribute("src", this.photo);
-        photo.style.height =  '40 rem';
-        photo.style.display='flex';
+        img.setAttribute("src", this.img);
+        img.style.height =  '40 rem';
+        img.style.display='flex';
 
         let name = document.createElement('h1');
         name.innerHTML = this.name;
@@ -44,8 +44,9 @@ function fullInform(merchandise) {
         let vendor_code = document.createElement('h3');
         vendor_code.innerHTML = this.vendor_code;
 
-        let description = document.createElement('div');
-        divText.style.width = '30%';
+        let description = document.createElement('p');
+        description.innerHTML = this.description;;
+
 
         let price = document.createElement('h2');
         price.innerHTML = this.price + ' $';
@@ -58,12 +59,6 @@ function fullInform(merchandise) {
         button.style.fontWeight = 'bold';
         button.style.fontSize = '1,2rem';
 
-        // divInfo.appendChild(img);
-        // divText.appendChild(name);
-        // divText.appendChild(author);
-        // divText.appendChild(par);
-        // divText.appendChild(price);
-        // divText.appendChild(button);
     };
 
 fullInform(merchandise);
